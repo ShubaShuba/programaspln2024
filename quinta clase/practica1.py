@@ -11,3 +11,6 @@ tokens=nltk.word_tokenize(texto,"spanish")
 
 for token in tokens:
     print(token)
+
+palabras_Total=len(tokens)
+print("Total de palabras: ",palabras_Total)
