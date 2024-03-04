@@ -1,2 +1,2 @@
 # PLN-FIME
-esta es una prueba de sincronizacion
+esta es una prueba de sincronizacion# OPTATIVA-PLN
