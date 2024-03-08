@@ -16,4 +16,5 @@ palabras_unicas = len(tokens_conjunto)
 
 riqueza_lexica = palabras_unicas/palabras_totales
 
+print("el token es")
 print(riqueza_lexica)
