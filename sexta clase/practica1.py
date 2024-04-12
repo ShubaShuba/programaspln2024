@@ -1,11 +1,5 @@
 import nltk
 
-def riqueza_lexica(tokens):
-    tokens_conjunto = set(tokens)
-    palabras_totales = len(tokens)
-    palabras_unicas = len(tokens_conjunto)
-    riqueza_lexica = palabras_unicas/palabras_totales
-    return riqueza_lexica
 
 
 carpeta = "C:\\Users\\pabli\\FIME\\"
@@ -15,7 +9,11 @@ with open(carpeta+archivo_nombre,"r") as archivo:
     texto=archivo.read()    
 
 
-tokens=nltk.word_tokenize(texto,"spanish")
-riqueza_lexica=riqueza_lexica(tokens)
-print(riqueza_lexica)
+tokens = nltk.word_tokenize(texto, "spanish")
+
+texto_nltk = nltk.Text(tokens)
+
+print(texto_nltk.similar("esto"))
+
+print(texto_nltk.concordance("rapido"))
 
