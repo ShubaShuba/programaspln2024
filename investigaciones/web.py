@@ -4,7 +4,11 @@
 import nltk
 import urllib.request
 
-url = "https://pastebin.com/CJtDF6uQ"
+input("Quiere usar una Web Personalizada?")
+if input == "si":
+    url = input("Ingrese la url de la pagina web: ")
+else:
+    url = "https://pastebin.com/CJtDF6uQ"
 
 response = urllib.request.urlopen(url)
 html = response.read()
@@ -25,5 +29,5 @@ print(texto)
 tokens = nltk.word_tokenize(texto, "spanish")
 
 texto_nltk = nltk.Text(tokens)
-
-print(texto_nltk.concordance("el"))
+concordancia = input("Ingrese la palabra para buscar en el texto: ")
+print(texto_nltk.concordance(concordancia))
