@@ -42,3 +42,29 @@ num_lineas = texto_nltk.count("\n")
 print("Numero de lineas: ", num_lineas)
 
 
+
+#Parte 2 del trabajo
+
+#Cargar palabras funcionales en español
+palabras_funcionales = nltk.corpus.stopwords.words("spanish")
+for palabras_funcional in palabras_funcionales:
+    print(palabras_funcional)
+
+#tokenizar limpiamente
+tokens_limpios = [token for token in tokens if token.lower() not in palabras_funcionales]
+
+#impresiones
+
+print(tokens_limpios)
+print("Numero de palabras: ", len(tokens))
+print("Numero de palabras limpias: ", len(tokens_limpios))
+
+#crear un objeto Text de NLTK y calcular la distribucion de frecuencia
+texto_nltk = nltk.Text(tokens_limpios)
+frecuencia = nltk.FreqDist(texto_nltk)
+
+#Graficar las 40 palabras mas comunes
+frecuencia.plot(40)
+
+
+
