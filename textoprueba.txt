@@ -1,6 +1,19 @@
-Usando las herramientas de esta actividad de descubrimiento pude observar los usos importantes que serían para cada método para mostrar información de un conjunto de datos. 
-El grafico de burbujas puede ser útil al mostrar tres variables diferentes por ejemplo los planos xy como los puntos y un tercero para establecer un tamaño en las burbujas.
-El grafico de violín puede servir para comparar múltiples categorías ya que puede mostrar los datos por densidad a diferencia de los tradicionales.
-Los gráficos 3D, aunque yo los veo difíciles de representar pueden servir para que se vean atractivos los datos a mostrar.
-Y los demás métodos gráficos vistos pueden ser útiles en casos específicos como el de pastel para representar de manera atractiva las variables o el clásico de barras que funciona como un método de comparación con diferentes variables.
-Realizar esta practica me ayudo a descubrir mas funcionalidades a la librería de matplotlib para los futuros análisis de datos que comenzaría a realizar en las siguientes clases entre los que vimos el más útil que vi fue el de burbujas por la manera tan fácil de colocar y mostrar los datos para su sencillo análisis y recibir resultados para los trabajos a realizar
+�Qu� es el reconocimiento de entidades nombradas (NER)?
+es un algoritmo utilizado para clasificar entidades en un texto en categor�as predefinidas como nombres de personas, lugares, organizaciones, etc. (Correcta)
+
+es una t�cnica de reconocimiento facial utilizada en sistemas de seguridad para identificar personas en im�genes y v�deos.
+
+es una t�cnica de reconocimiento de voz que convierte el habla en texto para su procesamiento en aplicaciones de chatbots y asistentes virtuales.
+
+es una t�cnica utilizada en la miner�a de datos para identificar patrones de comportamiento en conjuntos de datos estructurados.
+
+
+Pregunta: �Cu�l es una posible desventaja del reconocimiento de entidades nombradas (NER)?
+La dependencia del idioma y del dominio puede afectar la precisi�n del NER.
+
+El reconocimiento de entidades nombradas (NER) puede aumentar la eficiencia en la extracci�n de informaci�n de grandes vol�menes de texto.
+
+
+Los sistemas de NER siempre son capaces de identificar entidades nuevas con alta precisi�n.
+
+El NER es independiente del contexto y puede identificar entidades nombradas en cualquier tipo de texto.
