@@ -61,3 +61,9 @@ tokens_limpios = [token for token in tokens if token.lower() not in stopwords]
 print("Tokenizacion del texto sin palabras funcionales: ", tokens_limpios)
 print("numero total de tokens: ", len(tokens))
 print("numero total de tokens limpios: ", len(tokens_limpios))
+
+#frecuencia
+frecuencia = nltk.FreqDist(tokens)
+
+#grafico de frecuencia
+frecuencia.plot(30, cumulative=False)
