@@ -3,20 +3,22 @@ import nltk
 from tkinter import filedialog
 from tkinter import ttk
 
-def pdf_to_text(input_file,output_file):
+def pdf_to_text(input_file, output_file):
     pdf = filedialog.askopenfilename()
     while pdf[-4:] != ".pdf":
         print("El archivo no es de tipo pdf vuelva a intentarlo")
         pdf = filedialog.askopenfilename()
+    pdf_file = open(pdf, 'rb')
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
     text = []
-    with open(pdf, 'rb') as file:
-        reader = PyPDF2.PdfFileReader(file)
-        for page_number in range(reader.numPages):
-            page = reader.getPage(page_number)
-            text.append(page.extract_text())
+    pages = len(pdf_reader.pages)
+    for page_num in range(pages):
+        page = pdf_reader.pages(page_num)
+        text.append(page.extract_text())
     with open(output_file, 'w') as file:
         for line in text:
             file.write(line + '\n')
+
 
 # Reemplaza 'input.pdf' y 'output.txt' con los nombres de tus archivos
 pdf_to_text('prueba.pdf', 'textoprueba.txt')
