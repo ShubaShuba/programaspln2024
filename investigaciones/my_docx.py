@@ -1,14 +1,27 @@
 #Braulio Yahir Gaitan Vargas
 #Programa usando docx para sacar el texto de un archivo de word y lo guarda en un archivo de texto
+#para la busqueda del archivo de word se usa filedialog el cual puede usarse para buscar cualquier archivo en la computadora
 from docx import Document
 import nltk
 import matplotlib.pyplot as plt
+from tkinter import filedialog
+from tkinter import ttk
 
-def word_to_text(input_docx, output_txt):
-    doc = Document(input_docx)
-    with open(output_txt, 'w', encoding='utf-8') as txt_file:
-        for para in doc.paragraphs:
-            txt_file.write(para.text + '\n')
+
+
+
+def word_to_text(input_file,output_file):
+    doc = filedialog.askopenfilename()
+    while doc[-5:] != ".docx":
+        print("El archivo no es de tipo docx vuelva a intentarlo")
+        doc = filedialog.askopenfilename()
+    doc = Document(doc)
+    text = []
+    for paragraph in doc.paragraphs:
+        text.append(paragraph.text)
+    with open(output_file, 'w') as file:
+        for line in text:
+            file.write(line + '\n')
 
 # Reemplaza 'input.docx' y 'output.txt' con los nombres de tus archivos
 word_to_text('prueba.docx', 'textoprueba.txt')
@@ -26,7 +39,13 @@ print("Numero de lineas: ", len(lineas))
 
 #numero de palabras de un texto
 palabra = input("Ingrese la palabra a buscar: ")
-print("Numero de veces que se repite la palabra: ", texto.count(palabra))
+while palabra == "":
+    print("Ingrese una palabra valida")
+    palabra = input("Ingrese la palabra a buscar: ")
+if palabra not in texto:
+    print("La palabra no se encuentra en el texto")
+else:
+    print("Numero de veces que se repite la palabra: ", texto.count(palabra))
 
 #palabras funcionales del texto
 stopwords = nltk.corpus.stopwords.words('spanish')
@@ -53,4 +72,3 @@ print("Frecuencia de las palabras: ", frecuencia.most_common(10))
 #grafica de la frecuencia
 frecuencia.plot(10, cumulative=False)
 plt.show()
-
