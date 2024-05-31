@@ -87,7 +87,9 @@ if __name__ == "__main__":
     button3 = tk.Button(root, text="Reproducir audio", command=reproducir)
     button3.pack()
 
-    button4 = tk.Button(root, text="Salir", command=root.quit)
-    button4.pack()
+    
+
+    button10 = tk.Button(root, text="Salir", command=root.quit)
+    button10.pack()
 
     root.mainloop()
